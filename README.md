@@ -1,16 +1,15 @@
 # Playlista muzyczna sterowana zdarzeniami (C#)
 
-Aplikacja demonstrujšca programowanie sterowane zdarzeniami w C#.
+Aplikacja demonstrujaca sterowane zdarzeniami w C#.
 
 ## Funkcje
 - Dodawanie utworów do playlisty
 - Wywoływanie zdarzenia po dodaniu utworu
-- Powiadomienie SMS (symulowane)
+- Powiadomienie SMS
 
 ## Użyte koncepcje
 - Zdarzenia (`EventHandler<T>`)
 - Niestandardowe `EventArgs`
-- Separacja zadań
 
 ## Technologie
 - C# / .NET
