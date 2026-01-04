@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using MusicPlaylist;
-using MusicPlayList;
 
 namespace MusicPlaylist
 {
-    public class SmsNotificationService
+    public class SmsNotificationService : INotificationService
     {
         public void OnSongAdded(object? sender, SongAddedEventArgs e)
         {

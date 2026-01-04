@@ -30,26 +30,22 @@ namespace MusicPlayList
         {
             if (string.IsNullOrWhiteSpace(song))
             {
-                throw new ArgumentNullException("Song title cannot be null.");
+                throw new ArgumentException("Song title cannot be null or empty.", nameof(song));
             }
-        }
-
-
-
-        private static void SendSMSAddSong()
-        {
-            Console.WriteLine("SMS: Song added to the playlist.");
         }
 
         public static void Main()
         {
             MusicPlayList playList = new MusicPlayList();
             SmsNotificationService smsService = new SmsNotificationService();
+            EmailNotificationService emailService = new EmailNotificationService();
 
             playList.SongAdded += smsService.OnSongAdded;
+            playList.SongAdded += emailService.OnSongAdded;
 
-            playList.AddSong("Song 1");
-            //playList.AddSong(null);
+            playList.AddSong("Song Title.... ");
+            playList.AddSong("Another Song Title... ");
+            playList.AddSong(" ");
 
         }
 
